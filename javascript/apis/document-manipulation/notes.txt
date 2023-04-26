@@ -1,0 +1,5 @@
+This is just a simple reference note on some of the changes I had made while completing this JS tutorial
+
+    - I utilized inline styling with Javascript
+    - I created and manipulated elements using Javascript
+    - I referenced classes with prebuilt styles in my script element block using Javascript

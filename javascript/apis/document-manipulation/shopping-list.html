@@ -31,6 +31,49 @@
     </ul>
 
     <script>
+      // Creating the variables that will be used //
+      let shopList = document.querySelector("ul");
+      let shopInput = document.querySelector("input");
+      let shopButton = document.querySelector("button");
+
+      // creating function that will run in response to the button being clicked //
+
+      function onClicked() {
+        // store current value of input in a variable  and then change the current variable to an empty string//
+        currentInput = shopInput.value;
+        shopInput.value = "";
+        // create 3 new variables for the new input //
+        let newList = document.createElement("li");
+        let newSpan = document.createElement("span");
+        let newButton = document.createElement("button");
+        // Append the span and button as clidren of the list item
+        newList.appendChild(newSpan);
+        newList.appendChild(newButton);
+        // Set the text content of the span to the input element and the button to delete //
+        newSpan.textContent = currentInput;
+        newButton.textContent = "Delete";
+        // Append the list item as a part of the list // 
+        shopList.appendChild(newList);
+        // Attach an event handler to the delete button 
+        newButton.addEventListener("click", () => {
+          shopList.removeChild(newList);
+        });
+        //focus on the input after clicking add item //
+        shopInput.focus();
+      }
+
+  
+
+      // Adding an Event Listener when the button is clicked //
+      shopButton.addEventListener("click", onClicked);
+
+
+
+
+
+    
+
+
 
     </script>
   </body>
